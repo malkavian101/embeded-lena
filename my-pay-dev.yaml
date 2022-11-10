@@ -5,7 +5,7 @@ demo:
 primary:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://34.64.252.251:3306/petclinic?useUnicode=true&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://192.168.0.11:3306/petclinic?useUnicode=true&serverTimezone=Asia/Seoul
     user: root
     password: "root"
     initialization-mode: always
@@ -18,7 +18,7 @@ primary:
 secondary:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://34.64.252.251:3306/petclinic2?useUnicode=true&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://192.168.0.11:3306/petclinic2?useUnicode=true&serverTimezone=Asia/Seoul
     user: root
     password: "root"
     initialization-mode: always
