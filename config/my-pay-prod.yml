@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: my-pay
+  profiles:
+    active: prod
+my-pay:
+  money: 2000
+  name: "my-pay prod"

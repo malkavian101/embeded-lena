@@ -1,0 +1,43 @@
+demo:
+  name: "demo default"
+  version: "0.1"
+  fileupload: .
+primary:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.178.0.4:3306/demo?useUnicode=true&serverTimezone=Asia/Seoul
+    user: root
+    password: "root"
+    initialization-mode: always
+    sql-script-encoding: utf-8
+    hibernate:
+      #dialect: org.hibernate.dialect.PostgreSQLDialect
+      dialect: org.hibernate.dialect.MySQL5Dialec
+    hikari:
+      maximum-pool-size: 15
+secondary:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.178.0.4:3306/demo?useUnicode=true&serverTimezone=Asia/Seoul
+    user: root
+    password: "root"
+    initialization-mode: always
+    sql-script-encoding: utf-8
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialec
+    hikari:
+      maximum-pool-size: 5
+server:
+  lena:
+#     session:
+#       enabled: true
+#       primary-host: session-0.session.lena.svc.cluster.local
+#       primary-port: 5180
+#       secondary-host: session-1.session.lena.svc.cluster.local
+#       secondary-port: 5180
+#       external_session_store_enabled: true
+    stuckThread:
+      threshold: 1200
+    connector:
+      uri-encoding: UTF-8
+      use-body-encoding-for-uri: true

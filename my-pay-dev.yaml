@@ -1,0 +1,29 @@
+demo:
+  name: "demo dev"
+  version: "0.1"
+  fileupload: .
+primary:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://34.64.252.251:3306/petclinic?useUnicode=true&serverTimezone=Asia/Seoul
+    user: root
+    password: "root"
+    initialization-mode: always
+    sql-script-encoding: utf-8
+    hibernate:
+      #dialect: org.hibernate.dialect.PostgreSQLDialect
+      dialect: org.hibernate.dialect.MySQL5Dialec
+    hikari:
+      maximum-pool-size: 15
+secondary:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://34.64.252.251:3306/petclinic2?useUnicode=true&serverTimezone=Asia/Seoul
+    user: root
+    password: "root"
+    initialization-mode: always
+    sql-script-encoding: utf-8
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialec
+    hikari:
+      maximum-pool-size: 5
