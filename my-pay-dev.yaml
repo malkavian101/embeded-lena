@@ -2,6 +2,8 @@ demo:
   name: "demo dev"
   version: "0.1"
   fileupload: .
+babo:
+  babo: babo
 primary:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
